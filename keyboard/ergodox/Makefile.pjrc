@@ -116,4 +116,7 @@ micro: all
 cub: OPT_DEFS += -DKEYMAP_CUB
 cub: all
 
+krog: OPT_DEFS += -DKEYMAP_KROG
+krog: all
+
 
