@@ -3,18 +3,18 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *
      * 0: Colemak
      * ,--------------------------------------------------.           ,--------------------------------------------------.
-     * |   ~    |   1  |   2  |   3  |   4  |   5  |   =  |           |   -  |   6  |   7  |   8  |   9  |   0  |   \    |
+     * |   ~    |   1  |   2  |   3  |   4  |   5  |  L0  |           |   6  |   7  |   8  |   9  |   0  |   -  |   =    |
      * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
-     * | Tab    |   Q  |   W  |   F  |   P  |   G  |   [  |           |   ]  |   J  |   L  |   U  |   Y  |   ;  |  ~L3   |
+     * | Tab    |   Q  |   W  |   F  |   P  |   G  |   [  |           |   ]  |   J  |   L  |   U  |   Y  |   ;  |   \    |
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-     * | LShift |   A  |   R  |   S  |   T  |   D  |------|           |------|   H  |   N  |   E  |   I  |   O  |   '    |
+     * | ~L2    |   A  |   R  |   S  |   T  |   D  |------|           |------|   H  |   N  |   E  |   I  |   O  |   '    |
      * |--------+------+------+------+------+------|  L0  |           | ~L2  |------+------+------+------+------+--------|
-     * | LCtrl  |   Z  |   X  |   C  |   V  |   B  |      |           |      |   K  |   M  |   ,  |   .  |   /  | RCtrl  |
+     * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   K  |   M  |   ,  |   .  |   /  | RShift |
      * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
-     *   | Home |  End | LGui | LAlt | ~L1  |                                       | RAlt |  Up  |  Dn  | Left | Rght |
+     *   |LCtrl |  End | LGui | LAlt | ~L1  |                                       | RAlt |  Up  |  Dn  | Left | Rght |
      *   `----------------------------------'                                       `----------------------------------'
      *                                        ,-------------.       ,-------------.
-     *                                        | Home |  ~L4 |       |  ~L4 |  End |
+     *                                        | Home |  ~L4 |       |  ~L3 |  End |
      *                                 ,------|------|------|       |------+------+------.
      *                                 |      |      | PgUp |       |  Ins |      |      |
      *                                 | BkSp |  ESC |------|       |------| Enter| Space|
@@ -25,19 +25,19 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     KEYMAP(  // layout: layer 0: default
         // left hand
-        GRV, 1,   2,   3,   4,   5,   EQL,
+        GRV, 1,   2,   3,   4,   5,   FN0,
         TAB, Q,   W,   F,   P,   G,   LBRC,
-        LSFT,A,   R,   S,   T,   D,
-        LCTL,Z,   X,   C,   V,   B,   LGUI,
-        HOME,END, LGUI,LALT,FN1,
+        CAPS ,A,   R,   S,   T,   D,
+        LSFT,Z,   X,   C,   V,   B,   LGUI,
+        LCTL,FN3, LGUI,LALT,FN1,
                                       HOME,FN4,
                                            PGUP,
                                  BSPC,CAPS,PGDN,
         // right hand
-             BSLS,6,   7,   8,   9,   0,   MINS,
-             RBRC,J,   L,   U,   Y,   SCLN,QUOT,
-                  H,   N,   E,   I,   O   ,RSFT,
-              FN2,K,   M,   COMM,DOT, SLSH,RCTL,
+             6   ,7,   8,   9,   0,   MINS, EQL,
+             RBRC,J,   L,   U,   Y,   SCLN,BSLS,
+                  H,   N,   E,   I,   O   ,QUOT,
+              FN2,K,   M,   COMM,DOT, SLSH,RSFT,
                        RALT,LEFT,UP,  DOWN,RGHT,
          FN3, END,
          INS,
@@ -130,19 +130,19 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     KEYMAP(  // layout: layer 5: QWERTY
         // left hand
-        GRV, 1,   2,   3,   4,   5,   EQL,
+        GRV, 1,   2,   3,   4,   5,   FN0,
         TAB, Q,   W,   E,   R,   T,   LBRC,
-        LSFT,A,   S,   D,   F,   G,
-        LCTL,Z,   X,   C,   V,   B,   LGUI,
-        HOME,END, LGUI,LALT,FN1,
+        CAPS ,A,   S,   D,   F,   G,
+        LSFT,Z,   X,   C,   V,   B,   LGUI,
+        LCTL,END, LGUI,LALT,FN1,
                                       HOME,FN4,
                                            PGUP,
                                  BSPC,CAPS,PGDN,
         // right hand
-             BSLS,6,   7,   8,   9,   0,   MINS,
-             RBRC,Y,   U,   I,   O,   P   ,QUOT,
-                  H,   J,   K,   L,   SCLN,RSFT,
-             FN0, N,   M,   COMM,DOT, SLSH,RCTL,
+             6,   7,   8,   9,   0,   MINS,EQL,
+             RBRC,Y,   U,   I,   O,   P   ,BSLS,
+                  H,   J,   K,   L,   SCLN,QUOT,
+             FN0, N,   M,   COMM,DOT, SLSH,RSFT,
                        RALT,LEFT,UP,  DOWN,RGHT,
          FN3, END,
          INS,
