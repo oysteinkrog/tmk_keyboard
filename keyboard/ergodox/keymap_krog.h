@@ -27,7 +27,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // left hand
         GRV, 1,   2,   3,   4,   5,   FN0,
         TAB, Q,   W,   F,   P,   G,   LBRC,
-        CAPS ,A,   R,   S,   T,   D,
+        CAPS,A,   R,   S,   T,   D,
         LSFT,Z,   X,   C,   V,   B,   LGUI,
         LCTL,FN3, LGUI,LALT,FN1,
                                       HOME,FN4,
@@ -44,21 +44,21 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          DEL, ENT, SPC
     ),
 
-    KEYMAP(  // layout: layer 1: F-keys instead of number, symbols on homerow
+    KEYMAP(  // layout: layer 1: F-keys + cursor
         // left hand
         TRNS,F1,  F2,  F3,  F4,  F5,  F6,
-         FN8,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+        FN7, NO,  PGUP,UP,  PGDN,PGUP,TRNS,
+        TRNS,NO,  LEFT,DOWN,RGHT,PGDN,
+        TRNS,NO,  NO,  END, HOME,NO,  TRNS,
         TRNS,TRNS,TRNS,TRNS,TRNS,
                                       TRNS,TRNS,
                                            TRNS,
                                  TRNS,TRNS,TRNS,
         // right hand
              F7,  F8,  F9,  F10, F11, F12, TRNS,
-             TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-                  TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-             TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+             TRNS,PGUP,PGUP,UP,  PGDN,NO,  _VOLUP,
+                  PGDN,LEFT,DOWN,RGHT,NO,  _VOLDOWN,
+             TRNS,NO,  HOME,END, NO,  NO,  TRNS,
                        TRNS,TRNS,TRNS,TRNS,TRNS,
         TRNS,TRNS,
         TRNS,
