@@ -7,11 +7,11 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
      * | Tab    |   Q  |   W  |   F  |   P  |   G  |   [  |           |   ]  |   J  |   L  |   U  |   Y  |   ;  |   \    |
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-     * | ~L2    |   A  |   R  |   S  |   T  |   D  |------|           |------|   H  |   N  |   E  |   I  |   O  |   '    |
-     * |--------+------+------+------+------+------|  L0  |           | ~L2  |------+------+------+------+------+--------|
-     * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   K  |   M  |   ,  |   .  |   /  | RShift |
+     * | LShift |   A  |   R  |   S  |   T  |   D  |------|           |------|   H  |   N  |   E  |   I  |   O  | RShift |
+     * |--------+------+------+------+------+------|  L0  |           |   '  |------+------+------+------+------+--------|
+     * | LCtrl  |   Z  |   X  |   C  |   V  |   B  |      |           |      |   K  |   M  |   ,  |   .  |   /  | RCtrl  |
      * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
-     *   |LCtrl |  End | LGui | LAlt | ~L1  |                                       | RAlt |  Up  |  Dn  | Left | Rght |
+     *   |LCtrl |  End | LGui | LAlt | ~L1  |                                       | ~L1  | RAlt |  Dn  | Left | Rght |
      *   `----------------------------------'                                       `----------------------------------'
      *                                        ,-------------.       ,-------------.
      *                                        | Home |  ~L4 |       |  ~L3 |  End |
@@ -27,18 +27,18 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // left hand
         GRV, 1,   2,   3,   4,   5,   FN0,
         TAB, Q,   W,   F,   P,   G,   LBRC,
-        CAPS,A,   R,   S,   T,   D,
-        LSFT,Z,   X,   C,   V,   B,   LGUI,
-        LCTL,FN3, LGUI,LALT,FN1,
+        LSFT,A,   R,   S,   T,   D,
+        LCTL,Z,   X,   C,   V,   B,   LGUI,
+        FN2,FN3, LGUI,LALT,FN1,
                                       HOME,FN4,
                                            PGUP,
                                  BSPC,CAPS,PGDN,
         // right hand
              6   ,7,   8,   9,   0,   MINS, EQL,
              RBRC,J,   L,   U,   Y,   SCLN,BSLS,
-                  H,   N,   E,   I,   O   ,QUOT,
-              FN2,K,   M,   COMM,DOT, SLSH,RSFT,
-                       RALT,LEFT,UP,  DOWN,RGHT,
+                  H,   N,   E,   I,   O   ,RSFT,
+             QUOT,K,   M,   COMM,DOT, SLSH,RCTL,
+                       FN1, RALT,UP,  DOWN,RGHT,
          FN3, END,
          INS,
          DEL, ENT, SPC
