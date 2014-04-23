@@ -5,13 +5,13 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ,--------------------------------------------------.           ,--------------------------------------------------.
      * |   ~    |   1  |   2  |   3  |   4  |   5  |  L0  |           |   6  |   7  |   8  |   9  |   0  |   -  |   =    |
      * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
-     * | Tab    |   Q  |   W  |   F  |   P  |   G  |   [  |           |   ]  |   J  |   L  |   U  |   Y  |   ;  |   \    |
+     * | Tab    |   Q  |   W  |   F  |   P  |   G  | Home |           |  End |   J  |   L  |   U  |   Y  |   ;  |   \    |
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
      * | LShift |   A  |   R  |   S  |   T  |   D  |------|           |------|   H  |   N  |   E  |   I  |   O  | RShift |
      * |--------+------+------+------+------+------|  L0  |           |   '  |------+------+------+------+------+--------|
      * | LCtrl  |   Z  |   X  |   C  |   V  |   B  |      |           |      |   K  |   M  |   ,  |   .  |   /  | RCtrl  |
      * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
-     *   |LCtrl |  End | LGui | LAlt | ~L1  |                                       | ~L1  | RAlt |  Dn  | Left | Rght |
+     *   |LCtrl |  End | LGui | LAlt | ~L1  |                                       | ~L1  | RAlt |   [  |   ]  |  ~L2 |
      *   `----------------------------------'                                       `----------------------------------'
      *                                        ,-------------.       ,-------------.
      *                                        | Home |  ~L4 |       |  ~L3 |  End |
@@ -26,19 +26,19 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KEYMAP(  // layout: layer 0: default
         // left hand
         GRV, 1,   2,   3,   4,   5,   FN0,
-        TAB, Q,   W,   F,   P,   G,   LBRC,
+        TAB, Q,   W,   F,   P,   G,   HOME,
         LSFT,A,   R,   S,   T,   D,
-        LCTL,Z,   X,   C,   V,   B,   LGUI,
-        FN2,FN3, LGUI,LALT,FN1,
-                                      HOME,FN4,
+        LCTL,Z,   X,   C,   V,   B,   FN0 ,
+        FN2, FN3, LGUI,LALT,FN1,
+                                      HOME,FN4 ,
                                            PGUP,
                                  BSPC,CAPS,PGDN,
         // right hand
-             6   ,7,   8,   9,   0,   MINS, EQL,
-             RBRC,J,   L,   U,   Y,   SCLN,BSLS,
+             6   ,7,   8,   9,   0,   MINS,EQL ,
+             END ,J,   L,   U,   Y,   SCLN,BSLS,
                   H,   N,   E,   I,   O   ,RSFT,
              QUOT,K,   M,   COMM,DOT, SLSH,RCTL,
-                       FN1, RALT,UP,  DOWN,RGHT,
+                       FN1, RALT,LBRC,RBRC,FN2 ,
          FN3, END,
          INS,
          DEL, ENT, SPC
@@ -46,8 +46,8 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     KEYMAP(  // layout: layer 1: F-keys + cursor
         // left hand
-        TRNS,F1,  F2,  F3,  F4,  F5,  F6,
-        FN7, NO,  PGUP,UP,  PGDN,PGUP,TRNS,
+        TRNS,F1,  F2,  F3,  F4,  F5,  TRNS,
+        TRNS,NO,  PGUP,UP,  PGDN,PGUP,TRNS,
         TRNS,NO,  LEFT,DOWN,RGHT,PGDN,
         TRNS,NO,  NO,  END, HOME,NO,  TRNS,
         TRNS,TRNS,TRNS,TRNS,TRNS,
@@ -55,9 +55,9 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                            TRNS,
                                  TRNS,TRNS,TRNS,
         // right hand
-             F7,  F8,  F9,  F10, F11, F12, TRNS,
-             TRNS,PGUP,PGUP,UP,  PGDN,NO,  _VOLUP,
-                  PGDN,LEFT,DOWN,RGHT,NO,  _VOLDOWN,
+             F6,  F7,  F8,  F9,  F10, F11, F12 ,
+             TRNS,PGUP,PGUP,UP,  PGDN,NO,  VOLU,
+                  PGDN,LEFT,DOWN,RGHT,NO,  VOLD,
              TRNS,NO,  HOME,END, NO,  NO,  TRNS,
                        TRNS,TRNS,TRNS,TRNS,TRNS,
         TRNS,TRNS,
@@ -67,10 +67,10 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     KEYMAP(  // layout: layer 2: mouse + numpad
         // left hand
-        TRNS,NO,  NO,  NO,  NO,  PAUS,PSCR,
-        TRNS,WH_L,WH_U,WH_D,WH_R,BTN2,TRNS,
-        TRNS,MS_L,MS_U,MS_D,MS_R,BTN1,
-        TRNS,NO,  NO,  NO,  NO,  BTN3,TRNS,
+        TRNS,NO  ,NO  ,WH_U,  NO,PAUS,PSCR,
+        TRNS,NO  ,WH_L,MS_U,WH_R,BTN2,TRNS,
+        TRNS,NO  ,MS_L,MS_D,MS_R,BTN1,
+        TRNS,NO  ,NO  ,WH_D,  NO,BTN3,TRNS,
         TRNS,TRNS,TRNS,TRNS,TRNS,
                                       TRNS,TRNS,
                                            TRNS,
@@ -80,7 +80,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              TRNS,NO,  P7,  P8,  P9,  PMNS,BSPC,
                   NO,  P4,  P5,  P6,  PPLS,PENT,
              TRNS,NO,  P1,  P2,  P3,  PPLS,PENT,
-                       P0,  PDOT,SLSH,PENT,PENT,
+                       P0,  PDOT,SLSH,PENT,TRNS,
         TRNS,TRNS,
         TRNS,
         TRNS,TRNS,TRNS
@@ -90,7 +90,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // left hand
         TRNS,NO,  NO,  NO,  NO,  NO,  FN7 ,
         LSFT,F13, F14, F15, F16, NO,  TRNS,
-            RSFT, F17, F18, F19, F20, NO,
+             RSFT,F17, F18, F19, F20, NO,
         TRNS,F21, F22, F23, F24, NO,  FN0,
         TRNS,TRNS,TRNS,TRNS,TRNS,
                                       TRNS,TRNS,
