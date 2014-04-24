@@ -5,16 +5,16 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ,--------------------------------------------------.           ,--------------------------------------------------.
      * |   ~    |   1  |   2  |   3  |   4  |   5  |  L0  |           |   6  |   7  |   8  |   9  |   0  |   -  |   =    |
      * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
-     * | Tab    |   Q  |   W  |   F  |   P  |   G  | Home |           |  End |   J  |   L  |   U  |   Y  |   ;  |   \    |
+     * | Tab    |   Q  |   W  |   F  |   P  |   G  | Home |           | End  |   J  |   L  |   U  |   Y  |   ;  |   \    |
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-     * | LShift |   A  |   R  |   S  |   T  |   D  |------|           |------|   H  |   N  |   E  |   I  |   O  | RShift |
-     * |--------+------+------+------+------+------|  L0  |           |   '  |------+------+------+------+------+--------|
-     * | LCtrl  |   Z  |   X  |   C  |   V  |   B  |      |           |      |   K  |   M  |   ,  |   .  |   /  | RCtrl  |
+     * | ESC    |   A  |   R  |   S  |   T  |   D  |------|           |------|   H  |   N  |   E  |   I  |   O  |   '    |
+     * |--------+------+------+------+------+------|  L0  |           | Ins  |------+------+------+------+------+--------|
+     * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   K  |   M  |   ,  |   .  |   /  | RShift |
      * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
-     *   |LCtrl |  End | LGui | LAlt | ~L1  |                                       | ~L1  | RAlt |   [  |   ]  |  ~L2 |
+     *   |LCtrl |  ~L2 | LGui | LAlt | ~L1  |                                       | ~L1  | RAlt |   [  |   ]  | RCtrl |
      *   `----------------------------------'                                       `----------------------------------'
      *                                        ,-------------.       ,-------------.
-     *                                        | Home |  ~L4 |       |  ~L3 |  End |
+     *                                        |  ~L2 |  ~L4 |       |  ~L3 |  ~L2 |
      *                                 ,------|------|------|       |------+------+------.
      *                                 |      |      | PgUp |       |  Ins |      |      |
      *                                 | BkSp |  ESC |------|       |------| Enter| Space|
@@ -27,19 +27,19 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // left hand
         GRV, 1,   2,   3,   4,   5,   FN0,
         TAB, Q,   W,   F,   P,   G,   HOME,
-        LSFT,A,   R,   S,   T,   D,
-        LCTL,Z,   X,   C,   V,   B,   FN0 ,
-        FN2, FN3, LGUI,LALT,FN1,
-                                      HOME,FN4 ,
+        CAPS,A,   R,   S,   T,   D,
+        LSFT,Z,   X,   C,   V,   B,   FN0 ,
+        LCTL,FN2, LGUI,LALT,FN1,
+                                      FN2 ,FN4 ,
                                            PGUP,
                                  BSPC,CAPS,PGDN,
         // right hand
              6   ,7,   8,   9,   0,   MINS,EQL ,
              END ,J,   L,   U,   Y,   SCLN,BSLS,
-                  H,   N,   E,   I,   O   ,RSFT,
-             QUOT,K,   M,   COMM,DOT, SLSH,RCTL,
-                       FN1, RALT,LBRC,RBRC,FN2 ,
-         FN3, END,
+                  H,   N,   E,   I,   O   ,QUOT,
+             INS ,K,   M,   COMM,DOT, SLSH,RSFT,
+                       FN1, RALT,LBRC,RBRC,RCTL,
+         FN3, FN2,
          INS,
          DEL, ENT, SPC
     ),
