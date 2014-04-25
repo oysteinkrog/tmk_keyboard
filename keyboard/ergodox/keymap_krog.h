@@ -31,8 +31,8 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         LSFT,Z,   X,   C,   V,   B,   FN0 ,
         LCTL,FN2, LGUI,LALT,FN1,
                                       FN2 ,FN4 ,
-                                           PGUP,
-                                 BSPC,CAPS,PGDN,
+                                           NO  ,
+                                 BSPC,CAPS,FN2 ,
         // right hand
              6   ,7,   8,   9,   0,   MINS,EQL ,
              END ,J,   L,   U,   Y,   SCLN,BSLS,
@@ -67,10 +67,10 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     KEYMAP(  // layout: layer 2: mouse + numpad
         // left hand
-        TRNS,NO  ,NO  ,WH_U,  NO,PAUS,PSCR,
-        TRNS,NO  ,WH_L,MS_U,WH_R,BTN2,TRNS,
+        TRNS,NO  ,NO  ,NO  ,NO  ,PAUS,PSCR,
+        TRNS,NO  ,WH_U,MS_U,WH_D,BTN2,TRNS,
         TRNS,NO  ,MS_L,MS_D,MS_R,BTN1,
-        TRNS,NO  ,NO  ,WH_D,  NO,BTN3,TRNS,
+        TRNS,NO  ,WH_L,WH_D,WH_R,BTN3,TRNS,
         TRNS,TRNS,TRNS,TRNS,TRNS,
                                       TRNS,TRNS,
                                            TRNS,
