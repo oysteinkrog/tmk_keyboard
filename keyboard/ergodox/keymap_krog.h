@@ -8,7 +8,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
      * | Tab    |   Q  |   W  |   F  |   P  |   G  | Home |           | End  |   J  |   L  |   U  |   Y  |   ;  |   \    |
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-     * | ESC    |   A  |   R  |   S  |   T  |   D  |------|           |------|   H  |   N  |   E  |   I  |   O  |   '    |
+     * | LCtrl  |   A  |   R  |   S  |   T  |   D  |------|           |------|   H  |   N  |   E  |   I  |   O  |   '    |
      * |--------+------+------+------+------+------|  L0  |           | Ins  |------+------+------+------+------+--------|
      * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   K  |   M  |   ,  |   .  |   /  | RShift |
      * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
@@ -28,17 +28,17 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // left hand
         GRV ,1   ,2   ,3   ,4   ,5   ,FN0 ,
         TAB ,Q   ,W   ,F   ,P   ,G   ,HOME,
-        CAPS,A   ,R   ,S   ,T   ,D   ,
-        LSFT,Z   ,X   ,C   ,V   ,B   ,FN0 ,
+        LCTL,A   ,R   ,S   ,T   ,D   ,
+        LSFT,Z   ,X   ,C   ,V   ,B   ,CAPS ,
         LCTL,FN2 ,LGUI,LALT,FN1 ,
                                       FN2 ,FN4 ,
                                            NO  ,
-                                 BSPC,CAPS,FN2 ,
+                                 BSPC,RSFT,CAPS,
         // right hand
              6   ,7   ,8   ,9   ,0   ,MINS,EQL ,
              END ,J   ,L   ,U   ,Y   ,SCLN,BSLS,
-                  H   ,N   ,E   ,I   ,O   ,QUOT,
-             INS ,K   ,M   ,COMM,DOT ,SLSH,RSFT,
+                  H   ,N   ,E   ,I   ,O   ,RCTL,
+             QUOT,K   ,M   ,COMM,DOT ,SLSH,RSFT,
                        FN1 ,RALT,LBRC,RBRC,RCTL,
         FN3 ,FN2 ,
         INS ,
