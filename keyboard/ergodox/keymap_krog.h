@@ -128,7 +128,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS,
         TRNS,TRNS,TRNS
     ),
-
+/*
     KEYMAP(  // layout: layer 5: QWERTY
         // left hand
         GRV ,1   ,2   ,3   ,4   ,5   ,FN0 ,
@@ -149,7 +149,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         INS ,
         DEL ,ENT ,SPC
     ),
-
+*/
     KEYMAP(  // layout: layer 6:
         // left hand
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
