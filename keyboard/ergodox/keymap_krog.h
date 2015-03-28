@@ -26,8 +26,8 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     KEYMAP(  // layout: layer 1: F-keys + cursor
         // left hand
-        GRV ,1   ,2   ,3   ,4   ,5   ,FN0 ,
-        TAB ,Q   ,W   ,F   ,P   ,G   ,HOME,
+        GRV ,1   ,2   ,3   ,4   ,5   ,MINS ,
+        TAB ,Q   ,W   ,F   ,P   ,G   ,LBRC,
         LCTL,A   ,R   ,S   ,T   ,D   ,
         LSFT,Z   ,X   ,C   ,V   ,B   ,LGUI ,
         FN2 ,FN3 ,NO  ,LALT,FN1 ,
@@ -35,12 +35,12 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                            LGUI,
                                  BSPC,CAPS,FN5 ,
         // right hand
-             6   ,7   ,8   ,9   ,0   ,MINS,EQL ,
-             END ,J   ,L   ,U   ,Y   ,SCLN,BSLS,
+             EQL  ,6   ,7   ,8   ,9   ,0   ,EQL ,
+             RBRC ,J   ,L   ,U   ,Y   ,SCLN,BSLS,
                   H   ,N   ,E   ,I   ,O   ,RCTL,
              QUOT,K   ,M   ,COMM,DOT ,SLSH,RSFT,
                        FN1 ,RALT,LBRC,RBRC,FN2 ,
-        FN3 ,FN2 ,
+        FN3 ,FN0 ,
         INS ,
         DEL ,ENT ,SPC
     ),
