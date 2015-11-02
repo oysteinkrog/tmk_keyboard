@@ -56,8 +56,8 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                            TRNS,
                                  TRNS,TRNS,TRNS,
         // right hand
-             F6  ,F7  ,F8  ,F9  ,F10 ,F11 ,F12 ,
-             VOLU,NO  ,PGUP,UP  ,PGDN,NO  ,TRNS,
+             NO  ,F6  ,F7  ,F7  ,F9  ,F10 ,F11 ,
+             VOLU,NO  ,PGUP,UP  ,PGDN,NO  ,F12 ,
                   HOME,LEFT,DOWN,RGHT,END ,TRNS,
              VOLD,NO  ,NO  ,NO  ,NO  ,NO  ,TRNS,
                        TRNS,TRNS,TRNS,TRNS,TRNS,
