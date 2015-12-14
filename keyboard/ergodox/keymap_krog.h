@@ -33,7 +33,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         FN2 ,FN3 ,NO  ,LALT,FN1 ,
                                       FN2 ,FN4 ,
                                            LGUI,
-                                 BSPC,CAPS,FN5 ,
+                                 BSPC,ESC,FN5 ,
         // right hand
              EQL  ,6   ,7   ,8   ,9   ,0   ,EQL ,
              RBRC ,J   ,L   ,U   ,Y   ,SCLN,BSLS,
